@@ -1,11 +1,11 @@
-
+from models.Animals import Animals
 """
         @Author: Selim The Magnificent
         @Date: 01.24.2023
         @Credit: ["Selim OLMAZ", [Bayram Kuliev]]
         @Links: selimolmazz@gmail.com
 """
-class Homan:
+class Homan(Animals):
     def __init__(self, first_name, last_name):
         self.name = first_name
         self.lastName = last_name 

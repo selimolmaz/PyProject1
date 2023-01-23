@@ -7,5 +7,7 @@ def main():
     SayHallo(h)
     print(h.__repr__())
     print(h.__str__())
+    print(h.eat())
+
 if __name__ == "__main__":
     main()
