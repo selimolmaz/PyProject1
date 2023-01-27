@@ -1,26 +1,17 @@
 import threading
 import time
+# the function for doing two things in same time
+def th(function1, function2):
+    # Create two threads
+    t1 = threading.Thread(target=function1)
+    t2 = threading.Thread(target=function2)
 
-def print_numbers():
-    for i in range(10):
-        print(i)
-        time.sleep(0.5)
+    # Start the threads
+    t1.start()
+    t2.start()
 
-def print_letters():
-    for letter in "abcdefghij":
-        print(letter)
-        time.sleep(0.5)
+    # Wait for both threads to finish
+    t1.join()
+    t2.join()
 
-# Create two threads
-t1 = threading.Thread(target=print_numbers)
-t2 = threading.Thread(target=print_letters)
-
-# Start the threads
-t1.start()
-t2.start()
-
-# Wait for both threads to finish
-t1.join()
-t2.join()
-
-print("Both threads finished.")
+    return print("Both threads finished.")

@@ -2,9 +2,9 @@ class Animals:
     def __init__(self):
         pass
     def make_A_Sound(self):
-        return "Egege egege"
+        return print("Egege egege")
     def move(self):
-        return "i am fastest fuck boi"
+        return print("i am fastest fuck boi")
     def eat(self):
-        return "nam nam namnam"
+        return print("nam nam namnam")
     
