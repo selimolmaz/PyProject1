@@ -1,7 +1,11 @@
 import requests
+import asyncio
 
-def getRequest(url):
-    response = requests.get(url)
+from modules.AsyncModule import run_async
+
+@run_async
+async def get(url):
+    response = await asyncio.ensure_future(requests.get(url))
     httpCode = response.status_code # HTTP cevabının durum kodunu yazdırır
     json = response.json() # Cevabın JSON verisini yazdırır
-    return json
+    return (httpCode, json)
