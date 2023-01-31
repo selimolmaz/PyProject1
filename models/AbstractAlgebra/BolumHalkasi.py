@@ -7,12 +7,9 @@ class BolumHalkasi(Halka):
         2) Tersinir
     """
     def __init__(self):
-        self.defination = BolumHalkasi.bolumHalkasi_defination
+        self.defination = self.bolumHalkasi_defination
     def __str__(self):
         return self.defination
     
 
-bh = BolumHalkasi()
-print(bh.halka_defination)
-print(bh.bolumHalkasi_defination)
 

@@ -1,4 +1,4 @@
-from Halka import Halka
+from models.AbstractAlgebra.Halka import Halka
 
 class AltHalka(Halka):
     altHalka_defination = """
@@ -13,6 +13,4 @@ class AltHalka(Halka):
         return self.defination
     
 
-ah = AltHalka()
-print(ah.altHalka_defination)
 
